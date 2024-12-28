@@ -1,4 +1,5 @@
 import {useState} from "react";
+import PropTypes from 'prop-types';
 import "./Carousel.css";
 import leftArrow from "../../assets/left-arrow.png";
 import rightArrow from "../../assets/right-arrow.png";
@@ -45,6 +46,9 @@ const Carousel = ({images})=>{
             
         </div>
     );
+};
+Carousel.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 

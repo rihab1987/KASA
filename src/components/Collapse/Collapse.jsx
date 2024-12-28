@@ -1,4 +1,5 @@
 import {useState} from "react";
+import PropTypes from 'prop-types';
 import collapseIcon from "../../assets/collapse-arrow.svg";
 import "./Collapse.css";
 
@@ -49,4 +50,12 @@ function Collapse ({ title, content, isList}) {
 
     );
 }
+Collapse.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+    ]).isRequired,
+    isList: PropTypes.bool,
+};
 export default Collapse;

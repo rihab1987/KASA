@@ -1,4 +1,5 @@
 import "./Rating.css";
+import PropTypes from "prop-types";
 
 function Rating ({ratingData}){
     const filledStars = Array.from({length: ratingData},(_, index)=>(
@@ -16,4 +17,8 @@ function Rating ({ratingData}){
         </div>
     );
 }
+Rating.propTypes = {
+    ratingData: PropTypes.number.isRequired, 
+};
+
 export default Rating;
