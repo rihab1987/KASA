@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: "montserrat";
+    box-sizing: border-box;
+    color: black;
+    font-weight: 500;
+
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Apply margin to all elements except the footer */
+.content {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.about_div {
+    margin: 50px 105px 50px 105px;
+}
+
+@media (max-width:767.98px) {
+
+    h2 {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    p {
+        font-size: 14px
+    }
+
+
+    .content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .about_div {
+        margin: 15px 0;
+    }
+}
