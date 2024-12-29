@@ -1,4 +1,5 @@
 import "./Banner.css";
+import PropTypes from "prop-types";
 
 function Banner({ image, alt, title }) {
   return (
@@ -12,5 +13,10 @@ function Banner({ image, alt, title }) {
     </section>
   );
 }
-
+// Validation des propTypes
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,  
+  alt: PropTypes.string.isRequired,   
+  title: PropTypes.string.isRequired, 
+};
 export default Banner;

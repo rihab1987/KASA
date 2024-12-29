@@ -1,4 +1,5 @@
 import "./tags.css";
+import PropTypes from "prop-types";
 
 function Tags({tagData}){
     if (!tagData){
@@ -15,4 +16,7 @@ function Tags({tagData}){
 
     );
 }
+Tags.propTypes = {
+    tagData: PropTypes.arrayOf(PropTypes.string).isRequired, // `tagData` doit être un tableau de chaînes de caractères obligatoires
+};
 export default Tags;

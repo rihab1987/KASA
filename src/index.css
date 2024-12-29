@@ -1,10 +1,28 @@
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     font-family: "montserrat";
-    box-sizing: border-box;
     color: black;
     font-weight: 500;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 90px;
+    
 }
 
 h2 {
@@ -16,14 +34,9 @@ p {
     font-size: 18px;
 }
 
-/* Apply margin to all elements except the footer */
-.content {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
 .about_div {
-    margin: 50px 105px 50px 105px;
+    padding: 0 20px;
+    margin: 0;
 }
 
 @media (max-width:767.98px) {
@@ -41,6 +54,7 @@ p {
     .content {
         margin-left: 20px;
         margin-right: 20px;
+        flex: 1;
     }
 
     .about_div {

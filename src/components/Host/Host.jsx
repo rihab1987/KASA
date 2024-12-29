@@ -1,4 +1,5 @@
 import "./Host.css";
+import PropTypes from "prop-types";
 
 function Host({hostData}){
     return (
@@ -12,4 +13,11 @@ function Host({hostData}){
         
     );
 }
+Host.propTypes = {
+    hostData: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        picture: PropTypes.string.isRequired,
+    }).isRequired
+};
+   
 export default Host;

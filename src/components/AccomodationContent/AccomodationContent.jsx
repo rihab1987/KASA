@@ -53,7 +53,7 @@ export default function AccomodationContent() {
 
         <div className="description_host">
           <Host hostData={cardData.host} />
-          <Rating ratingData={cardData.rating} />
+          <Rating ratingData={Number(cardData.rating)} />
         </div>
       </div>
 
