@@ -69,6 +69,7 @@
 .collapse_content.open p {
     opacity: 1;
     transform: translateY(0); /* Visible lorsqu'ouvert */
+    padding: 15px;
 }
 
 .collapse_content.open { 

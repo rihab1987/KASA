@@ -16,7 +16,7 @@ function Banner({ image, alt, title }) {
 // Validation des propTypes
 Banner.propTypes = {
   image: PropTypes.string.isRequired,  
-  alt: PropTypes.string.isRequired,   
-  title: PropTypes.string.isRequired, 
+  alt: PropTypes.string,   
+  title: PropTypes.string, 
 };
 export default Banner;

@@ -19,7 +19,7 @@ function Card() {
             <Link
              className="gallery-item"
              key={item.id}
-             to={`./accomodation/${item.id}`}
+             to={`./logements/${item.id}`}
             >
                 <img src = {item.cover} alt = {item.title} />
                 <p>{item.title}</p>

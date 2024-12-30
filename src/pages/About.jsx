@@ -29,7 +29,10 @@ const about = [
 function About() {
   return(
     <div className="about-page">
-      <Banner image={image}/>
+      <Banner 
+      image={image}
+      alt="Bannière de la page A propos"
+      />
       <div className="about_div">
       {about.map((data, index) => (
           <Collapse key={index} title={data.title} content={data.description} />

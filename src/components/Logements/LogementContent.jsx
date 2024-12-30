@@ -5,9 +5,9 @@ import Tags from "../Tags/Tags";
 import Host from "../Host/Host";
 import Rating from "../Rating/Rating";
 import Collapse from "../Collapse/Collapse";
-import "./accomodationContent.css";
+import "./logementContent.css";
 
-export default function AccomodationContent() {
+function LogementContent() {
   const [cardData, setCardData] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
@@ -19,16 +19,18 @@ export default function AccomodationContent() {
           `http://localhost:8080/api/properties/${id}`
         );
 
-        if (response.status === 404) {
-          console.log("Page not found. Redirecting to Page404");
-          navigate("../../pages/Page404");
-        } else {
+        if (!response.ok) {
+          // Redirection vers la page 404 si la réponse n'est pas ok
+          navigate("/404");
+          return;
+        } 
+
           const data = await response.json();
           setCardData(data);
-        }
-      } catch (error) {
+      }catch (error) {
+        // Gestion des erreurs réseau
         console.error("Error fetching card data:", error);
-        navigate("../../pages/Page404");
+        navigate("/404");
       }
     };
 
@@ -42,18 +44,20 @@ export default function AccomodationContent() {
 
   return (
     <div className="content">
-      <Carousel images={cardData.pictures} />
+      {/* Validation des données avant de les afficher */}
+      {cardData.pictures && <Carousel images={cardData.pictures} />}
 
       <div className="description_column">
         <div className="description_title">
           <h2>{cardData.title}</h2>
           <p className="location">{cardData.location}</p>
-          <Tags tagData={cardData.tags} />
+          {cardData.tags && <Tags tagData={cardData.tags} />}
         </div>
 
         <div className="description_host">
-          <Host hostData={cardData.host} />
-          <Rating ratingData={Number(cardData.rating)} />
+         {cardData.host && <Host hostData={cardData.host} />}
+         {cardData.rating && <Rating ratingData={Number(cardData.rating)} />}
+          
         </div>
       </div>
 
@@ -68,3 +72,4 @@ export default function AccomodationContent() {
     </div>
   );
 }
+export default LogementContent;
