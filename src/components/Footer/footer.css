@@ -1,0 +1,44 @@
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+
+
+}
+
+footer img {
+    margin-top: 65px;
+    font-size: 20px;
+    width: 122px;
+
+}
+
+footer p {
+    margin: 30px 0;
+    font-size: 24px;
+}
+
+
+@media (max-width: 767.98px) {
+    footer {
+        height: 209px;
+        margin-top: 10px;
+    }
+
+    footer img {
+        margin-top: 65px;
+        font-size: 20px;
+        width: 142px;
+
+    }
+
+    footer p {
+        margin: 15px 0;
+        font-size: 12px;
+
+
+    }
+}

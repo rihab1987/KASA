@@ -1,0 +1,75 @@
+.menu{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 15px 100px 15px 100px;
+}
+
+.logo img{
+   width: 215px;
+   height: 70px;
+}
+
+.nav-ul{
+    display: flex;
+    gap: 55px;
+    position: relative;
+    height: 30px;
+}
+
+.nav-ul a {
+    text-decoration: none;  
+    color: black;
+    font-size: 24px;
+    position: relative;
+}
+.nav-ul a.active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -2px;
+    left:0;
+    right: 0;
+}
+/* Désactive la ligne pour les liens non actifs */
+.nav-ul a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+}
+.nav-ul a:hover.active::after {
+    background-color: black;
+}
+.nav-ul a:hover:not(.active)::after{
+    background-color: transparent;
+}
+
+@media  (max-width: 767.98px){
+    .menu {
+        height: 45px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .nav-ul {
+        height: 18px;
+        gap: 10px;
+       
+    }
+    .nav-ul a {
+        font-size: 16px;
+    
+    }
+    .logo img {
+        width: 145px;
+        height: 45px;
+       
+    }
+}
