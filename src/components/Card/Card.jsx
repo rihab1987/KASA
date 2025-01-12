@@ -18,9 +18,9 @@ function Card() {
     <div className="gallery-container container">
         {/*Boucle sur les données de la galerie pour créer une carte pour chaque élément*/}
         {gallery.map((item) =>(//Méthode map génère un lien (Link) pour chaque logement 
-            <Link
+            <Link // Link pour chaque carte 
              className="gallery-item"
-             key={item.id}//Chaque élement doit avoir une clé unique 
+             key={item.id}//Chaque élement doit avoir une clé unique : l'id du logement 
              to={`./logements/${item.id}`}//Lien vers la page du détail de logement 
             >
                 <img src = {item.cover} alt = {item.title} />

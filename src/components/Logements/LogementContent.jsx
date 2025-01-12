@@ -53,7 +53,7 @@ function LogementContent() {
 
   return (
     <div className="content">
-      {/* Affichage du Carousel uniquement si les images sont disponibles */}
+      {/* Affichage du Carousel uniquement si les images sont disponibles via les props images*/}
       {cardData.pictures && <Carousel images={cardData.pictures} />}
 
       <div className="description_column">

@@ -20,7 +20,7 @@ const Carousel = ({images})=>{
         );
     };
 //Verifivation pour afficher les flèches et le compteur uniquement si plusieurs images 
-    const showArrowsAndNumber = images&& images.length >1; // Définir une condition 
+    const showArrowsAndNumber = images&& images.length >1; // Définir une condition,j'affiche les flèches et le compteur si plusieurs images  
 
     return(
         <div className="carrousel_container">

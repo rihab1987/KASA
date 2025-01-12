@@ -63,8 +63,8 @@
 
 .collapse_content p {
     opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease-in,transform 0.3s ease-in;
+    transform: translateY(-10px); /*Glisser légèrement vers le bas pendant l'ouverture*/
+    transition: opacity 0.3s ease-in,transform 0.3s ease-in;/*Visible progressiveent*/
 }
 .collapse_content.open p {
     opacity: 1;

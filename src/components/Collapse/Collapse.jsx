@@ -12,7 +12,7 @@ const toggleCollapse = () => {
     setIsOpen(!isOpen);
     setIconRotation(isOpen ? "reverse" : "rotate") ;
 };
-//Classe dynamique pour le contenu (ouvert/fermé et liste ou non )
+//Classe Css dynamique pour le contenu (ouvert/fermé et liste ou non )
 const collapseContentClass = `collapse_content ${isList ? "facilities" : ""} ${isOpen ? "open" : "close"}`;
 
 
